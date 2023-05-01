@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.869ac256.css",
-    "main.js": "/static/js/main.3469adce.js",
+    "main.css": "/static/css/main.6cb6c43b.css",
+    "main.js": "/static/js/main.f42711c4.js",
     "static/media/privacy.jpg": "/static/media/privacy.3ccaf75580bcef29ea75.jpg",
     "static/media/faq.png": "/static/media/faq.023d0dd6cbac806855cc.png",
     "static/media/service.png": "/static/media/service.b38c1a5bf84bf5759e4d.png",
@@ -12,10 +12,10 @@
     "static/media/contact.png": "/static/media/contact.addb2f3ed669b7088591.png",
     "static/media/about.png": "/static/media/about.a8f0730b787d2a76637d.png",
     "static/media/TestimonialsCOver.png": "/static/media/TestimonialsCOver.7312eff88df9516bc851.png",
-    "static/media/2.jpg": "/static/media/2.05a5c41cca93c6966e4a.jpg",
-    "static/media/6.jpg": "/static/media/6.ae1c4d778297f5f7f282.jpg",
+    "static/media/2.jpg": "/static/media/2.ee157db7c678480e9a4c.jpg",
+    "static/media/6.jpg": "/static/media/6.50e2a878a3dd444107d2.jpg",
     "static/media/alina.png": "/static/media/alina.1aadf4eaa9a2b3dbe8e7.png",
-    "static/media/1.jpg": "/static/media/1.a11dfc4c6214df6a9ef7.jpg",
+    "static/media/1.jpg": "/static/media/1.96135ff5d88f44d6311e.jpg",
     "static/media/vission.jpg": "/static/media/vission.9d9315550d0f1e69f094.jpg",
     "static/media/mission.jpg": "/static/media/mission.dde4dc021a43b1d133e5.jpg",
     "static/media/pintaderacafe.png": "/static/media/pintaderacafe.c907c0ec06a84da73ae9.png",
@@ -23,9 +23,12 @@
     "static/media/santi.png": "/static/media/santi.bf3acf62375fe73c65be.png",
     "static/media/macellaio.png": "/static/media/macellaio.ddd6f61e08d89e8f73c8.png",
     "static/media/PERTICLE1 (2).png": "/static/media/PERTICLE1 (2).aeb6db8a093aece82183.png",
+    "static/media/5.jpg": "/static/media/5.81fd09154129f4239873.jpg",
     "static/media/jungle.png": "/static/media/jungle.34305b94aa404466014a.png",
     "static/media/default.png": "/static/media/default.1e8efa6b002fef0164e3.png",
+    "static/media/4.jpg": "/static/media/4.b5ec92596d82c472e987.jpg",
     "static/media/kenlos.png": "/static/media/kenlos.5698abaaaf06f4b7b819.png",
+    "static/media/3.jpg": "/static/media/3.f881b0e66eb905c97de1.jpg",
     "static/media/conchigliaitalian.png": "/static/media/conchigliaitalian.bf80f8a7ef510541093d.png",
     "static/media/hush.png": "/static/media/hush.d0e9499973793f09f6bf.png",
     "static/media/lamia.png": "/static/media/lamia.aaafc715c04555351e67.png",
@@ -36,11 +39,11 @@
     "static/media/lissome.png": "/static/media/lissome.6ea4eddde6acbf3b2660.png",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.869ac256.css.map": "/static/css/main.869ac256.css.map",
-    "main.3469adce.js.map": "/static/js/main.3469adce.js.map"
+    "main.6cb6c43b.css.map": "/static/css/main.6cb6c43b.css.map",
+    "main.f42711c4.js.map": "/static/js/main.f42711c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.869ac256.css",
-    "static/js/main.3469adce.js"
+    "static/css/main.6cb6c43b.css",
+    "static/js/main.f42711c4.js"
   ]
 }
