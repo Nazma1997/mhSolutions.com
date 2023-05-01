@@ -1,24 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import i18next from "i18next";
-import './select.css'
+import "./select.css";
 
-function Navbar({ setLanguage, language }) {
+function Navbar({ setLanguage }) {
+  const [language, updateLanguage] = useState("");
+
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("language");
+    updateLanguage(storedLanguage);
+  }, [language]);
 
   // const { t } = useTranslation();
 
   // const welcome_to_React = " Hello Bangladesh"
   const changeLanguage = (e) => {
-    setLanguage(e.target.value)
+    localStorage.setItem("language", e.target.value);
+    setLanguage(e.target.value);
+    updateLanguage(e.target.value);
   };
 
   // console.log('navla',language)
   //  if(ready){
   return (
-
     <>
-
       <section className="header sticky-top">
         <div className="container Index_header_container ">
           <div className="row">
@@ -53,10 +57,9 @@ function Navbar({ setLanguage, language }) {
                         aria-current="page"
                         to="/"
                       >
-                        {language === 'en' ? `Home` : `بيت`}
+                        {language === "en" ? `Home` : `بيت`}
                       </NavLink>
                     </li>
-
 
                     {/* <li className="nav-item">
                     <NavLink
@@ -71,9 +74,10 @@ function Navbar({ setLanguage, language }) {
                       <NavLink
                         className="navbar_custom_hover nav-link"
                         to="/about"
-
                       >
-                        {language === 'en' ? `About Us` : `معلومات عنا
+                        {language === "en"
+                          ? `About Us`
+                          : `معلومات عنا
 `}
                       </NavLink>
                     </li>
@@ -207,7 +211,9 @@ function Navbar({ setLanguage, language }) {
                         aria-current="page"
                         to="/payroll-services"
                       >
-                        {language === 'en' ? `Services` : `خدمات
+                        {language === "en"
+                          ? `Services`
+                          : `خدمات
 `}
                       </NavLink>
                     </li>
@@ -217,10 +223,11 @@ function Navbar({ setLanguage, language }) {
                         aria-current="page"
                         to="/mission"
                       >
-                        {language === 'en' ? `Mission` : `مهمة
+                        {language === "en"
+                          ? `Mission`
+                          : `مهمة
 
 `}
-
                       </NavLink>
                     </li>
                     {/* <li className="nav-item">
@@ -278,18 +285,28 @@ function Navbar({ setLanguage, language }) {
                     </ul>
                   </li> */}
 
-                    <select onChange={e => changeLanguage(e)} className="nav-item dropdown border-0 mx-1 navbar_custom_hover nav-link selectItem">
+                    <select
+                      onChange={(e) => changeLanguage(e)}
+                      className="nav-item dropdown border-0 mx-1 navbar_custom_hover nav-link selectItem"
+                    >
                       {/* <option>En</option> */}
-                      <option value={'en'} selected>{language === 'en' ? `English` : `إنجليزي
+                      <option value={"en"} selected>
+                        {language === "en"
+                          ? `English`
+                          : `إنجليزي
 
 
 `}
- </option>
-                      <option value={'ar'}>{language === 'en' ? `Arabic` : `عربي
+                      </option>
+                      <option value={"ar"}>
+                        {language === "en"
+                          ? `Arabic`
+                          : `عربي
 
 
 
-`}</option>
+`}
+                      </option>
                     </select>
                     <button type="button" className="navButton btn">
                       <Link to="/login">
@@ -297,7 +314,9 @@ function Navbar({ setLanguage, language }) {
                           src="assets/frontend/images/indexImages/person.png"
                           alt="image"
                         />
-                        {language === 'en' ? `Sign In` : `تسجيل الدخول
+                        {language === "en"
+                          ? `Sign In`
+                          : `تسجيل الدخول
 
 
 

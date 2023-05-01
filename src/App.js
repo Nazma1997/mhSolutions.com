@@ -1,62 +1,61 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 import PrivateRoute from './routes/PrivateRoute';
 
-import MasterLayout from './layouts/admin/MasterLayout';
 import Dashboard from './components/admin/Dashboard';
-import AdminLogin from './components/frontend/auth/AdminLogin';
-import Register from './components/frontend/register/Register';
+import ClientDetails from './components/admin/client/ClientDetails';
+import ClientList from './components/admin/client/ClientList';
+import EmployeeDetails from './components/admin/employee/EmployeeDetails';
+import EmployeeList from './components/admin/employee/EmployeeList';
+import AddMHEmployee from './components/admin/mhEmployee/AddMHEmployee';
+import EditMHEmployee from './components/admin/mhEmployee/EditMHEmployee';
 import Position from './components/admin/position/Position';
 import Skill from './components/admin/skill/Skill';
 import Source from './components/admin/source/Source';
+import AdminLogin from './components/frontend/auth/AdminLogin';
 import EmployeeRegister from './components/frontend/auth/EmployeeRegister';
 import EmployeeRegisterWelcome from './components/frontend/profile/EmployeeRegisterWelcome';
-import EmployeeList from './components/admin/employee/EmployeeList';
-import ClientList from './components/admin/client/ClientList';
-import EmployeeDetails from './components/admin/employee/EmployeeDetails';
-import ClientDetails from './components/admin/client/ClientDetails';
-import AddMHEmployee from './components/admin/mhEmployee/AddMHEmployee';
-import EditMHEmployee from './components/admin/mhEmployee/EditMHEmployee';
+import Register from './components/frontend/register/Register';
+import MasterLayout from './layouts/admin/MasterLayout';
 
 //For client
-import ClientEmployeeList from './components/client/employee/EmployeeList';
-import ClientDashboard from './components/frontend/dashboard/ClientDashboard';
-import MHEmployeeList from './components/admin/mhEmployee/MHEmployeeList';
-import Places from './components/frontend/map/Places';
 import ViewCertificate from './components/admin/employee/ViewCertificate';
-import Login from './components/frontend/login/Login';
+import MHEmployeeList from './components/admin/mhEmployee/MHEmployeeList';
+import ClientEmployeeList from './components/client/employee/EmployeeList';
 import Home from './components/frontend/Home/Home';
-import ClientMasterLayout from './layouts/frontend/ClientMasterLayout';
 import About from './components/frontend/about/About';
-import Customer from './components/frontend/customer/Customer';
+import ClientDashboard from './components/frontend/dashboard/ClientDashboard';
+import Login from './components/frontend/login/Login';
+import Places from './components/frontend/map/Places';
+import ClientMasterLayout from './layouts/frontend/ClientMasterLayout';
 // import Career from './components/frontend/career/Career';
-import DashboardLayout from './layouts/frontend/dashboard/DashboardLayout';
+import { useEffect } from 'react';
+import JobOpportunities from './components/frontend/career/JobOpportunities';
 import MyEmployee from './components/frontend/client/MyEmployee';
+import Contract from './components/frontend/contract/Contract';
+import Customers from './components/frontend/customers/Customers';
 import EmployeeViewDetails from './components/frontend/dashboard/EmployeeViewDetails';
+import Faq from './components/frontend/faq/Faq';
+import CorporateInformation from './components/frontend/legal/CorporateInformation';
+import Privacy from './components/frontend/legal/Privacy';
+import TermsOfUse from './components/frontend/legal/TermsOfUse';
+import MeetTheTeam from './components/frontend/meet-the-team/MeetTheTeam';
+import Mission from './components/frontend/mission/Mission';
 import Payroll from './components/frontend/services/Payroll';
 import Recruiting from './components/frontend/services/Recruiting';
 import StrategyConsultancy from './components/frontend/services/StrategyConsultancy';
-import JobOpportunities from './components/frontend/career/JobOpportunities';
-import CorporateInformation from './components/frontend/legal/CorporateInformation';
-import TermsOfUse from './components/frontend/legal/TermsOfUse';
-import Privacy from './components/frontend/legal/Privacy';
-import Mission from './components/frontend/mission/Mission';
-import MeetTheTeam from './components/frontend/meet-the-team/MeetTheTeam';
-import Customers from './components/frontend/customers/Customers';
-import Contract from './components/frontend/contract/Contract';
-import Faq from './components/frontend/faq/Faq';
-
-
-
-
-
-
+import DashboardLayout from './layouts/frontend/dashboard/DashboardLayout';
 
 
 function App() {
 
-const [language, setLanguage] = useState('en');
+const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
+
+useEffect(() => {
+  localStorage.setItem('language', language);
+  const storedLanguage = localStorage.getItem('language');
+}, [language]);
 
 // console.log('lg', language)
 
@@ -69,7 +68,7 @@ const [language, setLanguage] = useState('en');
         <Routes>
 
           <Route path='/admin-login' element={<AdminLogin />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<Login setLanguage={setLanguage} language={language} />} />
           <Route path='/register' element={<Register />} />
           <Route path='/employee-register' element={<EmployeeRegister />} />
           <Route path='/employee-welcome' element={<EmployeeRegisterWelcome />} />

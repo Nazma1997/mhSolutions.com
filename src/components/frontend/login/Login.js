@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
 import jwt_decode from "jwt-decode";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { Form } from 'antd';
-import { responseNotification } from '../../../utils/notifcation';
 import { loginHandler } from '../../../api/auth';
 import Navbar from '../../../layouts/frontend/Navbar';
+import { responseNotification } from '../../../utils/notifcation';
 
-function Login() {
+function Login({language, setLanguage}) {
 
     const navigate = useNavigate();
 
@@ -67,7 +67,7 @@ function Login() {
     return (
 
         <>
-        <Navbar />
+        <Navbar setLanguage={setLanguage} />
         <section className="total_wrapper">
             <div className="container-fluid">
                 <div className="row">
