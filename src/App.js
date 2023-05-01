@@ -31,6 +31,9 @@ import Places from './components/frontend/map/Places';
 import ClientMasterLayout from './layouts/frontend/ClientMasterLayout';
 // import Career from './components/frontend/career/Career';
 import { useEffect } from 'react';
+import 'react-date-range/dist/styles.css'; // main css file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import ShortList from './components/client/ShortList/ShortList';
 import JobOpportunities from './components/frontend/career/JobOpportunities';
 import MyEmployee from './components/frontend/client/MyEmployee';
 import Contract from './components/frontend/contract/Contract';
@@ -82,6 +85,7 @@ useEffect(() => {
           <Route path="/" element={<ClientMasterLayout setLanguage={setLanguage} language={language}/>} >
             <Route index path='/' element={<Home language={language}/>} />
             <Route path='/about' element={<About />} />
+            <Route path='/short-list' element={<ShortList />} />
             {/* <Route path='/customer' element={<Customer />} /> */}
             <Route path='/job-opportunities' element={<JobOpportunities />} />
             <Route path='/corporate-information' element={<CorporateInformation />} />

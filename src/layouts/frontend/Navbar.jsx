@@ -81,6 +81,17 @@ function Navbar({ setLanguage }) {
 `}
                       </NavLink>
                     </li>
+                    <li className="nav-item">
+                      <NavLink
+                        className="navbar_custom_hover nav-link"
+                        to="/short-list"
+                      >
+                        {language === "en"
+                          ? `Short List`
+                          : `معلومات عنا
+`}
+                      </NavLink>
+                    </li>
 
                     {/* <li className="nav-item dropdown">
                     <a
