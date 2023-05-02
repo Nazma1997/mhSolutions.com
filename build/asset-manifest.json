@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.6cb6c43b.css",
-    "main.js": "/static/js/main.f42711c4.js",
+    "main.js": "/static/js/main.ff442162.js",
     "static/media/privacy.jpg": "/static/media/privacy.3ccaf75580bcef29ea75.jpg",
-    "static/media/faq.png": "/static/media/faq.023d0dd6cbac806855cc.png",
-    "static/media/service.png": "/static/media/service.b38c1a5bf84bf5759e4d.png",
-    "static/media/video.jpg": "/static/media/video.fe54fd117d3f82e16d4a.jpg",
-    "static/media/client.png": "/static/media/client.5ea77042c6736ea5b61e.png",
-    "static/media/ceo.jpg": "/static/media/ceo.091c50fae916d254e725.jpg",
-    "static/media/mission-vission.png": "/static/media/mission-vission.1fb15f174aee6ddd24e4.png",
-    "static/media/contact.png": "/static/media/contact.addb2f3ed669b7088591.png",
-    "static/media/about.png": "/static/media/about.a8f0730b787d2a76637d.png",
     "static/media/TestimonialsCOver.png": "/static/media/TestimonialsCOver.7312eff88df9516bc851.png",
+    "static/media/client.png": "/static/media/client.a8cb8d4eaa80e0b35fc9.png",
+    "static/media/service.png": "/static/media/service.dc9d2263e2f816ee8079.png",
+    "static/media/about.png": "/static/media/about.a824188570c34336be74.png",
+    "static/media/contact.png": "/static/media/contact.b79879a3172287df79a8.png",
+    "static/media/mission-vission.png": "/static/media/mission-vission.cf02761d5c6cd7852dff.png",
+    "static/media/faq.png": "/static/media/faq.3bfc6e3da042b739c4df.png",
+    "static/media/video.jpg": "/static/media/video.048e533d9569f12b9c77.jpg",
+    "static/media/alina.png": "/static/media/alina.84ed21179061104ec25c.png",
+    "static/media/vission.jpg": "/static/media/vission.32c95d6000b35a1e9fd4.jpg",
+    "static/media/1.jpg": "/static/media/1.96135ff5d88f44d6311e.jpg",
+    "static/media/mission.jpg": "/static/media/mission.64cb0bf2700a73dda280.jpg",
+    "static/media/pintaderacafe.png": "/static/media/pintaderacafe.c907c0ec06a84da73ae9.png",
+    "static/media/ceo.jpg": "/static/media/ceo.44e2bd5fafc2edf292f2.jpg",
     "static/media/2.jpg": "/static/media/2.ee157db7c678480e9a4c.jpg",
     "static/media/6.jpg": "/static/media/6.50e2a878a3dd444107d2.jpg",
-    "static/media/alina.png": "/static/media/alina.1aadf4eaa9a2b3dbe8e7.png",
-    "static/media/1.jpg": "/static/media/1.96135ff5d88f44d6311e.jpg",
-    "static/media/vission.jpg": "/static/media/vission.9d9315550d0f1e69f094.jpg",
-    "static/media/mission.jpg": "/static/media/mission.dde4dc021a43b1d133e5.jpg",
-    "static/media/pintaderacafe.png": "/static/media/pintaderacafe.c907c0ec06a84da73ae9.png",
     "static/media/cicchetti.png": "/static/media/cicchetti.7a0251057469248e2d79.png",
     "static/media/santi.png": "/static/media/santi.bf3acf62375fe73c65be.png",
     "static/media/macellaio.png": "/static/media/macellaio.ddd6f61e08d89e8f73c8.png",
@@ -35,15 +35,14 @@
     "static/media/lucio.png": "/static/media/lucio.42afa34bf18603e0b0ae.png",
     "static/media/tastingitaly.png": "/static/media/tastingitaly.8342cc2b97441006cc4d.png",
     "static/media/lsq.png": "/static/media/lsq.094d82b36cb9b31698bb.png",
-    "static/media/7.jpg": "/static/media/7.6fe2bc66a939b36a3f00.jpg",
     "static/media/lissome.png": "/static/media/lissome.6ea4eddde6acbf3b2660.png",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.6cb6c43b.css.map": "/static/css/main.6cb6c43b.css.map",
-    "main.f42711c4.js.map": "/static/js/main.f42711c4.js.map"
+    "main.ff442162.js.map": "/static/js/main.ff442162.js.map"
   },
   "entrypoints": [
     "static/css/main.6cb6c43b.css",
-    "static/js/main.f42711c4.js"
+    "static/js/main.ff442162.js"
   ]
 }
