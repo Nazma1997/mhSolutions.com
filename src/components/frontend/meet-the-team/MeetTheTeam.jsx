@@ -1,23 +1,23 @@
-import React from 'react'
-import imgVission from '../../../layouts/frontend/image/mission-vission.png';
-import img2 from '../../../layouts/frontend/image/2.jpg';
+import React from 'react';
 import img1 from '../../../layouts/frontend/image/1.jpg';
-import img3 from '../../../layouts/frontend/image/alina.png';
-import img7 from '../../../layouts/frontend/image/7.jpg';
+import img2 from '../../../layouts/frontend/image/2.jpg';
 import img6 from '../../../layouts/frontend/image/6.jpg';
+import img7 from '../../../layouts/frontend/image/7.jpg';
+import img3 from '../../../layouts/frontend/image/alina.png';
 import ceo from '../../../layouts/frontend/image/ceo.jpg';
+import imgVission from '../../../layouts/frontend/image/mission-vission.png';
 
 const MeetTheTeam = () => {
   return (
     <div>
       <div className="banner-header section-padding valign bg-img bg-fixed img-fluid"
         data-background="https://i.ibb.co/J26y8YG/career2.jpg" style={{
-          backgroundImage: `url(${imgVission})`, minHeight: '1000px', width: '100%', backgroundSize: '100% 100%',
+          backgroundImage: `url(${imgVission})`, minHeight: '500px', width: '100%', backgroundSize: '100% 100%',
           backgroundRepeat: 'no-repeat'
         }}>
         <div className="container">
           <div className="row">
-            <div className="col-md-12  caption align-middle" style={{ marginTop: '400px' }}>
+            <div className="col-md-12  caption align-middle" style={{ marginTop: '200px' }}>
               <h5 style={{ color: 'white', fontSize: '20px' }}>MH PREMIER STAFFING SOLUTIONS</h5>
               <h1 style={{ color: 'white', fontSize: '70px' }}>Meet the Team</h1>
 
