@@ -49,6 +49,9 @@ import Payroll from './components/frontend/services/Payroll';
 import Recruiting from './components/frontend/services/Recruiting';
 import StrategyConsultancy from './components/frontend/services/StrategyConsultancy';
 import DashboardLayout from './layouts/frontend/dashboard/DashboardLayout';
+import Meeting from './components/frontend/login/Meeting';
+import AfterLogin from './components/frontend/login/AfterLogin';
+import Pdf from './components/frontend/login/Pdf';
 
 
 function App() {
@@ -99,6 +102,9 @@ useEffect(() => {
             <Route path='/payroll-services' element={<Payroll />} />
             <Route path='/recruiting-services' element={<Recruiting />} />
             <Route path='/strategy-consultancy-services' element={<StrategyConsultancy />} />
+            <Route path='/meeting' element={<Meeting />} />
+            <Route path='/after-login' element={<AfterLogin />} />
+            {/* <Route path='/pdf' element={<Pdf/>} /> */}
           </Route>
 
 

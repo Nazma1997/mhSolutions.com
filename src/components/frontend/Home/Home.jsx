@@ -8,7 +8,10 @@ import DownloadApp from "./DownloadApp";
 import Testimonial from "./Testimonial";
 import Contact from "./Contact";
 import Cookies from "../cookies/Cookies";
-// import Cookies from "../cookies/Cookies";
+import Meeting from "../login/Meeting";
+import AfterLogin from "../login/AfterLogin";
+import Pdf from "../login/Pdf";
+
 
 function Home({language}) {
 
@@ -16,6 +19,9 @@ function Home({language}) {
   return (
     <div>
       <Cookies />
+      {/* <Meeting /> */}
+      {/* <AfterLogin /> */}
+      {/* <Pdf /> */}
       <Banner language={language}/>
       <Services language={language}/>
       <Position language={language}/>
