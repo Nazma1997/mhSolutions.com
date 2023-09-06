@@ -1,53 +1,74 @@
-/* Calendar.css */
+.arrow-button{
+  background-color:#C6A34F ;
+  color: white;
+  font-size: 30px;
+  border-radius: 30%;
+  margin-top: 15px;
+}
+.minus-margin{
+  margin-left: -15px;
+}
+@media (min-width: 300px) {
+  .custom-margin {
+    margin-top: 13px;
+  }
+}
+.calender-main-div{
+border: 1px solid rgba(128, 128, 128, 0.178);
+border-radius: 15px;
 
-.container {
-  margin: 5px 20px;
-  color: grey;
+}
+/* Media query for large and medium devices */
+@media screen and (min-width: 768px) {
+  .calender-main-div {
+    margin: 50px;
+  }
 }
 
-.calendar-header {
+/* Media query for small devices (less than 768px) */
+@media screen and (max-width: 767px) {
+  .calender-main-div {
+    margin: 0; /* Kono margin na thakuk */
+  }
+}
+.tab-item{
+   display: flex;
+}
+@media screen and (max-width: 992px) {
+  .tab-item{
+    display: block; /* Change to block display for small and medium screens */
+  }
+}
+
+
+.calender-main{
+/* border: 1px solid rgba(128, 128, 128, 0.178); */
+border-radius: 15px;
+}
+/* Media query for large and medium devices */
+@media screen and (min-width: 768px) {
+  .calender-main {
+    margin: 40px;
+  
+  }
+}
+
+/* Media query for small devices (less than 768px) */
+@media screen and (max-width: 767px) {
+  .calender-main {
+    margin: 0; /* Kono margin na thakuk */
+  }
+}
+.calender{
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #F8485E;
-  padding: 10px;
-  color: white;
-  font-weight: bold;
+  flex-wrap: wrap;
+  background: White;
+  border-radius: 15px;
+  
+ 
 }
-
-.prev-button,
-.next-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.prev-button {
-  margin-right: 20px;
-}
-
-.next-button {
-  margin-left: 20px;
-}
-
-.fc-day.selected {
-  background-color: red !important;
-  color: white !important;
-  border-radius: 50%;
-}
-
-.fc-day.selected:hover {
-  background-color: red !important;
-  color: white !important;
-  border-radius: 50%;
-}
-
-.fc-day.selected a {
-  color: white !important;
-}
-
-.fc-day.selected a:hover {
-  color: white !important;
+.custom-btn:focus{
+  outline: none;
+ 
 }
