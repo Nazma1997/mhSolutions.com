@@ -52,6 +52,7 @@ import DashboardLayout from './layouts/frontend/dashboard/DashboardLayout';
 import Meeting from './components/frontend/login/Meeting';
 import AfterLogin from './components/frontend/login/AfterLogin';
 import Pdf from './components/frontend/login/Pdf';
+import Calendar from './components/frontend/calender/Calender';
 
 
 function App() {
@@ -104,7 +105,9 @@ useEffect(() => {
             <Route path='/strategy-consultancy-services' element={<StrategyConsultancy />} />
             <Route path='/meeting' element={<Meeting />} />
             <Route path='/after-login' element={<AfterLogin />} />
-            {/* <Route path='/pdf' element={<Pdf/>} /> */}
+            <Route path='/pdf' element={<Pdf/>} />
+            <Route path='/calender' element={<Calendar />} />
+
           </Route>
 
 
