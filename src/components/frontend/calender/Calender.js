@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
+import { Button, Modal } from 'react-bootstrap';
 import './calender.css'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import { SlCalender } from 'react-icons/sl';
@@ -61,6 +62,8 @@ const Day = styled.div`
     `}
 `;
 
+
+
 function Calendar() {
   const DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
   const DAYS_LEAP = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -75,7 +78,7 @@ function Calendar() {
   const [month, setMonth] = useState(date.getMonth());
   const [year, setYear] = useState(date.getFullYear());
   const [startDay, setStartDay] = useState(getStartDayOfMonth(date));
-  const [tab, setTab] = useState('calendar'); 
+  const [tab, setTab] = useState('calendar');
 
 
 
@@ -106,22 +109,40 @@ function Calendar() {
   }
 
 
+
+  const [showModal, setShowModal] = useState(false);
+  const [eventsForDateToShow, setEventsForDateToShow] = useState([]);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const itemsToShowInitially = 1;
+
+  const handleShowMoreClick = (date) => {
+    const eventsForDate = getEventsByDate(
+      date.toISOString().split('T')[0]
+    );
+    setEventsForDateToShow(eventsForDate);
+    setSelectedDate(date);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
   return (
     <div className=' bg-white calender-main-div'>
       <div className='d-lg-flex d-md-flex justify-content-lg-between justify-content-md-between py-3 mx-lg-5  mx-md-1 mx-sm-5'>
         <h5 className='mt-4 py-2 px-2 common-border'><SlCalender className='me-2 -mt-2 ' />Today,{formatDate(today)}</h5>
-        
-          <div className='d-flex my-2'> 
-            <MdKeyboardArrowLeft className='arrow-button' onClick={() => setDate(new Date(year, month - 1, day))} /> 
-            <div className='mx-2 mt-lg-3 mt-md-4 custom-margin'>
+
+        <div className='d-flex my-2'>
+          <MdKeyboardArrowLeft className='arrow-button' onClick={() => setDate(new Date(year, month - 1, day))} />
+          <div className='mx-2 mt-lg-3 mt-md-4 custom-margin'>
             <h4 className='font-weight-bold date-width ms-2'>{MONTHS[month]} {year}</h4>
-            </div>
-            <MdKeyboardArrowRight className='arrow-button' onClick={() => setDate(new Date(year, month + 1, day))} />
           </div>
+          <MdKeyboardArrowRight className='arrow-button' onClick={() => setDate(new Date(year, month + 1, day))} />
+        </div>
         <div className='tab-item d-flex  mt-4 py-1 px-2'>
-          <p className='me-2   month'> Months <SlCalender onClick={() => setTab('calendar')}  /></p>
+          <p className='me-2   month'> Months <SlCalender onClick={() => setTab('calendar')} /></p>
           <p className='me-2 common-border2 '><AiOutlineUnorderedList onClick={() => setTab('list')} /> List </p>
-          </div> 
+        </div>
       </div>
       {tab === 'calendar' && (
         <div className='calender-main'>
@@ -131,6 +152,7 @@ function Calendar() {
                 <strong >{d}</strong>
               </WeekDay>
             ))}
+
             {Array(days[month] + (startDay - 1))
               .fill(null)
               .map((_, index) => {
@@ -144,19 +166,25 @@ function Calendar() {
                     key={index}
                     isToday={d === today.getDate()}
                     isSelected={d === day}
-                    onClick={() => setDate(currentDate)}
+                    onClick={() => handleShowMoreClick(currentDate)}
                   >
                     {d > 0 ? (
                       <div>
                         {d} <br />
-                        {eventsForDate.length >= 2 ? (
-                          <select className='select-border '>
-                            {eventsForDate.map((event, idx) => (
-                              <option key={idx} className='event-title my-1'>
-                                {event.title}
-                              </option>
+                        {eventsForDate.length > itemsToShowInitially ? (
+                          <div>
+                            {eventsForDate.slice(0, itemsToShowInitially).map((event, idx) => (
+                              <div key={idx}>
+                                <p className='event-title my-1'>{event.title}</p>
+                              </div>
                             ))}
-                          </select>
+                            <button
+                              onClick={() => handleShowMoreClick(currentDate)}
+                              className=' btn-show-more' // Add a CSS class here (e.g., 'btn-show-more')
+                            >
+                              Show More
+                            </button>
+                          </div>
                         ) : (
                           eventsForDate.map((event, idx) => (
                             <div key={idx}>
@@ -172,14 +200,23 @@ function Calendar() {
                 );
               })}
           </div>
-      </div>
-      )}
-      {tab === 'list' && (
-        <List />
-      )}
 
+          <Modal show={showModal} onHide={handleCloseModal} centered>
+            <Modal.Header closeButton>
+              <Modal.Title>{selectedDate && formatDate(selectedDate)}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <ul>
+                {eventsForDateToShow.map((event, idx) => (
+                  <li key={idx}>{event.title}</li>
+                ))}
+              </ul>
+            </Modal.Body>
+          </Modal>
+        </div>
+      )}
+      {tab === 'list' && <List />}
     </div>
   );
 }
-
 export default Calendar;
